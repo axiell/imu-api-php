@@ -2486,7 +2486,7 @@ The logout method relinquishes access as the previously authenticated user.
 
 > **WARNING:**
 >
-> Logging in causes the IMu server to start a new texserver process to handle all access to EMu module. This new texserver process will use a Texpress licence. The licence will not be freed until the logout method is called. See the server FAQ [How does IMu use Texpress licences?](TODO-link-to-faq) for more information.
+> Logging in causes the IMu server to start a new texserver process to handle all access to EMu module. This new texserver process will use a Texpress licence. The licence will not be freed until the logout method is called. See the server FAQ [How does IMu use Texpress licences?](FAQ.md##-How-does-imu-use-texpress-licences?) for more information.
 
 # 6) Updating an EMu Module
 
