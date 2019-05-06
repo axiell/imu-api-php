@@ -1152,7 +1152,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * application
 
-    Returns information about the preferred [application](TODO:-link-to-glossery) multimedia attached to a record.
+    Returns information about the preferred [application](GLOSSARY.md###-Application) multimedia attached to a record.
 
     > **NOTE:**
     >
@@ -1164,7 +1164,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * audio
 
-    Returns information about the preferred [audio](TODO:-link-to-glossery) multimedia attached to a record.
+    Returns information about the preferred [audio](GLOSSARY.md###-Audio) multimedia attached to a record.
 
 * audios
 
@@ -1172,7 +1172,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * image
 
-    Returns information about the preferred [image](TODO:-link-to-glossery) multimedia attached to a record.
+    Returns information about the preferred [image](GLOSSARY.md###-Image) multimedia attached to a record.
 
 * images
 
@@ -1184,7 +1184,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * video
 
-    Returns information about the preferred [video](TODO:-link-to-glossery) multimedia attached to a record.
+    Returns information about the preferred [video](GLOSSARY.md###-Video) multimedia attached to a record.
 
 * videos
 
@@ -1196,11 +1196,11 @@ See [Multimedia](#3.4\)-multimedia) for more information.
 
 * master
     
-    Returns information about the [master](TODO:-link-to-glossery) multimedia file.
+    Returns information about the [master](GLOSSARY.md###-Master) multimedia file.
 
 * resolutions
 
-    Returns information about all multimedia [resolutions](TODO:-link-to-glossery).
+    Returns information about all multimedia [resolutions](GLOSSARY.md###-Resolutions).
 
 * resource
 
@@ -1216,11 +1216,11 @@ See [Multimedia](#3.4\)-multimedia) for more information.
 
 * supplementary
 
-    Returns information about all [supplementary](TODO:-link-to-glossery) multimedia files.
+    Returns information about all [supplementary](GLOSSARY.md###-Supplementary) multimedia files.
 
 * thumbnail
 
-    Returns information about the multimedia [thumbnail](TODO:-link-to-glossery).
+    Returns information about the multimedia [thumbnail](GLOSSARY.md###-Thumbnail).
 
 See [Multimedia](#3.4\)-multimedia) for more information.
 
@@ -1474,7 +1474,7 @@ The following virtual columns return information about a set of multimedia attac
 * multimedia
 * videos
 
-All of these virtual columns return the [irn](TODO glossery), [type](TODO glossery) and [format](TODO glossery) of the Multimedia record attached to the current record. They also act as reference columns to the Multimedia module. This means that other columns from the Multimedia module (including [virtual columns](#virtual-columns)) can also be requested from the corresponding Multimedia record, for example:
+All of these virtual columns return the [irn](GLOSSARY.md###-IRN), [type](GLOSSARY.md###-MIME-type) and [format](GLOSSARY.md###-MIME-format) of the Multimedia record attached to the current record. They also act as reference columns to the Multimedia module. This means that other columns from the Multimedia module (including [virtual columns](#virtual-columns)) can also be requested from the corresponding Multimedia record, for example:
 
 1. Include the title for all attached multimedia:
 
@@ -2027,7 +2027,7 @@ The supported values for name are:
 
 * format
 
-    Specifies that the multimedia file should be converted to the specified [format](TODO-link-to-glossary). If the multimedia is not already in the required format it is reformatted on-the-fly.
+    Specifies that the multimedia file should be converted to the specified [format](GLOSSARY.md###-MIME-format). If the multimedia is not already in the required format it is reformatted on-the-fly.
 
     The IMu server uses ImageMagick to process the image and the range of supported formats is very large. The complete list is available from: http://www.imagemagick.org/script/formats.phpicon-external-link. Any of the supported formats can be used as the value part of this modifier.
 
