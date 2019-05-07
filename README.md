@@ -2494,7 +2494,7 @@ The `Module` class provides methods for inserting new records and for updating o
 
 > **NOTE:**
 >
-> By default these operations are restricted by the IMu server. Typically access to these operations is gained by [logging in to the IMu server](#5.1\)-The-login-method). See the [allow-updates](TODO-link-to-config-doc) entry of the server configuration for more information.
+> By default these operations are restricted by the IMu server. Typically access to these operations is gained by [logging in to the IMu server](#5.1\)-The-login-method). See the [allow-updates](CONFIGURATION.md##allow-updates) entry of the server configuration for more information.
 
 ## 6.1) The insert Method
 
