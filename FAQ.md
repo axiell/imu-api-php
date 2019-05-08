@@ -12,7 +12,7 @@ After imuserver has begun listening on the main-port, it may create several chil
 
 This is fine until a stateless program such as a web page wants to connect to the same imuserver process that handled its initial request. For example, a web page may run a search and fetch the first set of matching results. Later a second page of results may be required. The web page cannot connect on the original main-port as this connection may be accepted by one of the other imuserver processes, which know nothing of the original search.
 
-To solve this problem each imuserver allocates its own unique reconnection port. This is described in detail in the [Maintaining State](README.md#4\)-Maintaining-State) section of the IMu API documentation.
+To solve this problem each imuserver allocates its own unique reconnection port. This is described in detail in the [Maintaining State](README.md#4-maintaining-state) section of the IMu API documentation.
 
 The reconnection port numbers used are controlled by the reconnect-port setting in the configuration file. When an imuserver process needs to allocate a new reconnection port it starts from the value specified by the reconnect-port setting. If that port is already in use, it tries the next port and so on until it finds an unused port. IMu API programs then use the imuserver process’s reconnection port to ensure that they are communicating with the correct imuserver process.
 

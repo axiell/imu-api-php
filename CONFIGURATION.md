@@ -160,7 +160,7 @@ This is the port number that each server process will start at when trying to al
 
 For example, suppose that process-count is set to 3 and that `reconnect-port` is set to `50000`. When `imuserver` starts, three processes will be created. Each process will independently attempt to allocate a unique port to listen for reconnections. All three processes will first attempt to allocate port `50000`. One will succeed and the other two will fail. The two unsuccessful processes will then move on to try to allocate port `50001`. One will succeed and the other will fail. The unsuccessful process will then allocate port `50002`.
 
-Reconnection to a server is explained in detail in the [Maintaining State](README.md#4\)-Maintaining-State) section of the API documentation.
+Reconnection to a server is explained in detail in the [Maintaining State](README.md#4-maintaining-state) section of the API documentation.
 
 If this value is not set, it defaults to `5000` more than the value of [main-port](##main-port).
 
