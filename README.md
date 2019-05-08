@@ -45,7 +45,7 @@ The IMu API source code bundle for version 2.0 (or higher) is required to develo
 In order to use the IMu PHP API, include `IMu.php` in the PHP code. For example, if the IMu API source code is installed in the directory `/usr/local/lib/imu` the following line would be added to the PHP code:
 
 ```
-// TODO
+require_once '/usr/local/lib/imu/IMu.php';
 ```
 
 The `IMu.php` file defines the `IMu` class. This class includes static members which contain information about the IMu installation. The class includes:
@@ -80,7 +80,7 @@ exit(0);
 
 Many of the methods in the IMu library objects throw an exception when an error occurs. For this reason, code that uses IMu library objects should be surrounded with an `try` block.
 
-The following code is a basic template for writing .NET programs that use the IMu library:
+The following code is a basic template for writing PHP programs that use the IMu library:
 
 ```
 <?php
