@@ -18,7 +18,7 @@ The following settings are less likely to require modification:
 
 ## admin-port
 
-This is the number of a secondary port that `imuserver` will also listen on for connections. The difference between this setting and [main-port](##main-port) becomes significant when `imuserver` is running several child processes to handle requests.
+This is the number of a secondary port that `imuserver` will also listen on for connections. The difference between this setting and [main-port](#main-port) becomes significant when `imuserver` is running several child processes to handle requests.
 
 A connection on `main-port` may be handled by any of the processes (which is typically what you want), whereas a connection on `admin-port` is guaranteed to be accepted only by the master process which controls all the other processes. This makes this useful for administering the `imuserver` itself, hence the name.
 
@@ -70,13 +70,13 @@ This parameter is used by `imuserver` to determine how to connect to a `texserve
 * A host name and a port number/service name (as host:port)
 * An empty string
 
-If this value is not set, it will default to a port number `20000` less than the value used for [main-port](##main-port).
+If this value is not set, it will default to a port number `20000` less than the value used for [main-port](#main-port).
 
 If the value contains a port number or service name, `imuserver` uses it to create a socket connection to a `texserver` process, which is the same way that the EMu client creates its connection. If a host name is not included with port number or service name, the connection will be made to the local machine (`127.0.0.1`).
 
 If the value is empty (i.e. set to an empty string), the IMu Server will use a pipe to connect to `texserver`, rather than a socket.
 
-If a socket connection is used, `imuserver` will try to log in as the user specified in the [user-name](##server-config-user-name) entry. If no user-name is specified, imuserver will try to log in as the user running the imuserver (almost certainly user emu).
+If a socket connection is used, `imuserver` will try to log in as the user specified in the [user-name](#server-config-user-name) entry. If no user-name is specified, imuserver will try to log in as the user running the imuserver (almost certainly user emu).
 
 > **Important:**
 >
@@ -162,13 +162,13 @@ For example, suppose that process-count is set to 3 and that `reconnect-port` is
 
 Reconnection to a server is explained in detail in the [Maintaining State](README.md#4-maintaining-state) section of the API documentation.
 
-If this value is not set, it defaults to `5000` more than the value of [main-port](##main-port).
+If this value is not set, it defaults to `5000` more than the value of [main-port](#main-port).
 
 ## server-pool
 
 This is the number of `texserver` processes to be run for default access. The `texserver` processes are run using named pipes.
 
-If this value is not set, it defaults to `process-count`(##process-count).
+If this value is not set, it defaults to [process-count](#process-count).
 
 ## temp-path
 
@@ -230,7 +230,7 @@ If no value is specified trace-prefix defaults to:
 
 ## user-name
 
-This is the name of a user that `imuserver` will pass to `texserver` for authentication (see [data-source](##data-source)).
+This is the name of a user that `imuserver` will pass to `texserver` for authentication (see [data-source](#data-source)).
 
 This only applies if `imuserver` is using a socket connection to `texserver`. Be aware that this user must be able to be authenticated by `texserver` without requiring a password.
 
@@ -256,7 +256,7 @@ If this value is not set, it will default to internet.
 
 This value is used to control which records `imuserver` can retrieve when searching EMu tables after the user has been authenticated (logged in).
 
-The value can be any of those described in the [visibility](##visibility) section.
+The value can be any of those described in the [visibility](#visibility) section.
 
 > **Note:**
 >

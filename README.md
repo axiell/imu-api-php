@@ -1042,7 +1042,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * *application*
 
-    Returns information about the preferred [application](GLOSSARY.md###-Application) multimedia attached to a record.
+    Returns information about the preferred [application](GLOSSARY.md#application) multimedia attached to a record.
 
     > **NOTE:**
     >
@@ -1054,7 +1054,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * *audio*
 
-    Returns information about the preferred [audio](GLOSSARY.md###-Audio) multimedia attached to a record.
+    Returns information about the preferred [audio](GLOSSARY.md#audio) multimedia attached to a record.
 
 * *audios*
 
@@ -1062,7 +1062,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * *image*
 
-    Returns information about the preferred [image](GLOSSARY.md###-Image) multimedia attached to a record.
+    Returns information about the preferred [image](GLOSSARY.md#image) multimedia attached to a record.
 
 * *images*
 
@@ -1074,7 +1074,7 @@ Virtual columns are columns that do not actually exist in the EMu table being ac
 
 * *video*
 
-    Returns information about the preferred [video](GLOSSARY.md###-Video) multimedia attached to a record.
+    Returns information about the preferred [video](GLOSSARY.md#video) multimedia attached to a record.
 
 * *videos*
 
@@ -1086,11 +1086,11 @@ See [Multimedia](#3-4-multimedia) for more information.
 
 * *master*
     
-    Returns information about the [master](GLOSSARY.md###-Master) multimedia file.
+    Returns information about the [master](GLOSSARY.md#master) multimedia file.
 
 * *resolutions*
 
-    Returns information about all multimedia [resolutions](GLOSSARY.md###-Resolutions).
+    Returns information about all multimedia [resolutions](GLOSSARY.md#resolutions).
 
 * *resource*
 
@@ -1106,11 +1106,11 @@ See [Multimedia](#3-4-multimedia) for more information.
 
 * *supplementary*
 
-    Returns information about all [supplementary](GLOSSARY.md###-Supplementary) multimedia files.
+    Returns information about all [supplementary](GLOSSARY.md#supplementary) multimedia files.
 
 * *thumbnail*
 
-    Returns information about the multimedia [thumbnail](GLOSSARY.md###-Thumbnail).
+    Returns information about the multimedia [thumbnail](GLOSSARY.md#thumbnail).
 
 See [Multimedia](#3-4-multimedia) for more information.
 
@@ -1372,7 +1372,7 @@ The following virtual columns return information about a set of multimedia attac
 * *multimedia*
 * *videos*
 
-All of these virtual columns return the [irn](GLOSSARY.md###-IRN), [type](GLOSSARY.md###-MIME-type) and [format](GLOSSARY.md###-MIME-format) of the Multimedia record attached to the current record. They also act as reference columns to the Multimedia module. This means that other columns from the Multimedia module (including [virtual columns](#3-3-2-6-virtual-columns)) can also be requested from the corresponding Multimedia record, for example:
+All of these virtual columns return the [irn](GLOSSARY.md#irn), [type](GLOSSARY.md#mime-type) and [format](GLOSSARY.md#mime-format) of the Multimedia record attached to the current record. They also act as reference columns to the Multimedia module. This means that other columns from the Multimedia module (including [virtual columns](#3-3-2-6-virtual-columns)) can also be requested from the corresponding Multimedia record, for example:
 
 1. 
     Include the title for all attached multimedia:
@@ -1934,7 +1934,7 @@ The supported values for name are:
 
 * *format*
 
-    Specifies that the multimedia file should be converted to the specified [format](GLOSSARY.md###-MIME-format). If the multimedia is not already in the required format it is reformatted on-the-fly.
+    Specifies that the multimedia file should be converted to the specified [format](GLOSSARY.md#mime-format). If the multimedia is not already in the required format it is reformatted on-the-fly.
 
     The IMu server uses ImageMagick to process the image and the range of supported formats is very large. The complete list is available from: http://www.imagemagick.org/script/formats.php. Any of the supported formats can be used as the value part of this modifier.
 
@@ -2407,7 +2407,7 @@ The logout method relinquishes access as the previously authenticated user.
 
 > **WARNING:**
 >
-> Logging in causes the IMu server to start a new texserver process to handle all access to EMu module. This new texserver process will use a Texpress licence. The licence will not be freed until the logout method is called. See the server FAQ [How does IMu use Texpress licences?](FAQ.md##-How-does-imu-use-texpress-licences?) for more information.
+> Logging in causes the IMu server to start a new texserver process to handle all access to EMu module. This new texserver process will use a Texpress licence. The licence will not be freed until the logout method is called. See the server FAQ [How does IMu use Texpress licences?](FAQ.md#-how-does-imu-use-texpress-licences) for more information.
 
 <h1 id="6-updating-an-emu-module">Updating an EMu Module</h1>
 
@@ -2415,7 +2415,7 @@ The `IMuModule` class provides methods for inserting new records and for updatin
 
 > **NOTE:**
 >
-> By default these operations are restricted by the IMu server. Typically access to these operations is gained by [logging in to the IMu server](#5-1-the-login-method). See the [allow-updates](CONFIGURATION.md##allow-updates) entry of the server configuration for more information.
+> By default these operations are restricted by the IMu server. Typically access to these operations is gained by [logging in to the IMu server](#5-1-the-login-method). See the [allow-updates](CONFIGURATION.md#allow-updates) entry of the server configuration for more information.
 
 <h2 id="6-1-the-insert-method">The insert Method</h2>
 
