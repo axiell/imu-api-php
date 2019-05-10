@@ -40,7 +40,7 @@ At its core, IMu provides a set of Application Programming Interfaces (APIs).
 
 <h1 id="1-using-the-imu-api">Using The IMu API</h1>
 
-The IMu API source code bundle for version 2.0 (or higher) is required to develop an IMu-based application. This bundle contains all the classes that make up the IMu PHP API. IMu API bundles are available from the IMu [releases](https://emu.kesoftware.com/support/downloads/imu/releases) page.
+The IMu API source code bundle for version 2.0 (or higher) is required to develop an IMu-based application. This bundle contains all the classes that make up the IMu PHP API. IMu API bundles are available from the IMu [releases](https://github.com/axiell/imu-api-php/releases) page.
 
 In order to use the IMu PHP API, include `IMu.php` in the PHP code. For example, if the IMu API source code is installed in the directory `/usr/local/lib/imu` the following line would be added to the PHP code:
 
@@ -1340,9 +1340,12 @@ In this example the *name* parameter entered via the HTML search page is submitt
 
 The IMu API provides a number of special mechanisms to handle access to the multimedia stored in the EMu <abbr title="Database management system">DBMS</abbr>. These machanisms fall into three rough categories:
 
-1. Mechanisms to select Multimedia module records that are attached to another module. This is covered in the [Multimedia Attachments](#3-4-1-multimedia-attachments) section.
-1. Mechanisms to select multimedia files from a Multimedia module record. This is covered in the [Multimedia Files](#3-4-2-multimedia-files) and [Filters](#3-4-3-filters) sections.
-1. Mechanisms to apply modifications to multimedia files. This is covered in the [Modifiers](#3-4-4-modifiers) section.
+1. 
+    Mechanisms to select Multimedia module records that are attached to another module. This is covered in the [Multimedia Attachments](#3-4-1-multimedia-attachments) section.
+1. 
+    Mechanisms to select multimedia files from a Multimedia module record. This is covered in the [Multimedia Files](#3-4-2-multimedia-files) and [Filters](#3-4-3-filters) sections.
+1. 
+    Mechanisms to apply modifications to multimedia files. This is covered in the [Modifiers](#3-4-4-modifiers) section.
 
 It is important to note that a single record in the EMu DBMS can have multiple Multimedia module records associated with it. Each Multimedia module record can have multiple multimedia files associated with it. The seperate mechanisms for handling multimedia access can be composed so that it is possible to, for example:
 
@@ -1371,31 +1374,36 @@ The following virtual columns return information about a set of multimedia attac
 
 All of these virtual columns return the [irn](GLOSSARY.md###-IRN), [type](GLOSSARY.md###-MIME-type) and [format](GLOSSARY.md###-MIME-format) of the Multimedia record attached to the current record. They also act as reference columns to the Multimedia module. This means that other columns from the Multimedia module (including [virtual columns](#3-3-2-6-virtual-columns)) can also be requested from the corresponding Multimedia record, for example:
 
-1. Include the title for all attached multimedia:
+1. 
+    Include the title for all attached multimedia:
 
     ```
     multimedia.MulTitle
     ```
 
-1. Include the title for all attached images:
+1. 
+    Include the title for all attached images:
 
     ```
     images.MulTitle
     ```
 
-1. Include details about the master multimedia file for all attached images (using the virtual Multimedia module column master):
+1. 
+    Include details about the master multimedia file for all attached images (using the virtual Multimedia module column master):
 
     ```
     images.master
     ```
 
-1. Include multiple columns for all attached images:
+1. 
+    Include multiple columns for all attached images:
 
     ```
     images.(master,MulTitle,MulDescription)
     ```
 
-1. Include and rename multiple columns for all attached images:
+1. 
+    Include and rename multiple columns for all attached images:
 
     ```
     images.(master,title=MulTitle,description=MulDescription)
@@ -1801,25 +1809,29 @@ column(name operator value, name operator value);
 
 For example:
 
-1. Select multimedia resolutions with a width greater that 300 pixels:
+1. 
+    Select multimedia resolutions with a width greater that 300 pixels:
 
 ```
 resolutions(width > 300)
 ```
 
-1. Select the single multimedia resource with a width closest to 600:
+1. 
+    Select the single multimedia resource with a width closest to 600:
 
 ```
 resources(width @ 600)
 ```
 
-1. Select the thumbnail resource:
+1. 
+    Select the thumbnail resource:
 
 ```
 resources(kind == thumbnail)
 ```
 
-1. Specify multiple filters to select the single multimedia resource with a width and height closest to 600:
+1. 
+    Specify multiple filters to select the single multimedia resource with a width and height closest to 600:
 
 ```
 resources(width @ 600, height @ 600)
@@ -1964,37 +1976,43 @@ The supported values for name are:
 
 For example:
 
-1. Specify a Base64 encoding modifier:
+1. 
+    Specify a Base64 encoding modifier:
 
 ```
 resource{encoding:base64}
 ```
 
-1. Include a CRC32 checksum in the response:
+1. 
+    Include a CRC32 checksum in the response:
 
 ```
 resource{checksum:crc32}
 ```
 
-1. Reformat the multimedia image to the gif format:
+1. 
+    Reformat the multimedia image to the gif format:
 
 ```
 resource{format:gif}
 ```
 
-1. Resize the multimedia image to a height of 300 pixels:
+1. 
+    Resize the multimedia image to a height of 300 pixels:
 
 ```
 resource{height:300}
 ```
 
-1. Resize the multimedia image to a width of 300 pixels:
+1. 
+    Resize the multimedia image to a width of 300 pixels:
 
 ```
 resource{width:300}
 ```
 
-1. Resize the multimedia image to a height & width of 300 pixels and do not maintain aspect ratio:
+1. 
+    Resize the multimedia image to a height & width of 300 pixels and do not maintain aspect ratio:
 
 ```
 resource{height:300, width:300, aspectratio:no}
